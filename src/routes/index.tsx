@@ -1,20 +1,22 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useSignal } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 
 
 
 export default component$(() => {
+
+  const displayIndex = useSignal(0);
   return (
     <div></div>
   );
 });
 
 export const head: DocumentHead = {
-  title: 'Welcome to Qwik',
+  title: 'Affirmations',
   meta: [
     {
       name: 'description',
-      content: 'Qwik site description',
+      content: 'This is a feel good of app!',
     },
   ],
 };
