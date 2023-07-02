@@ -2,7 +2,6 @@ import { component$, createContextId, Slot, useContextProvider, useStore } from 
 import Modal from '~/components/modal';
 
 
-
 export const MyContext = createContextId('qwik-affirmations')
 
 export default component$(() => {
@@ -13,7 +12,7 @@ export default component$(() => {
   useContextProvider(MyContext, state)
   return (
     <>
-    {state.openModal && <Modal/>}
+    {state.openModal && <Modal/>} 
 
     <header>
     <i  onClick$={()=>{state.openModal=!state.openModal}} class="fa-solid fa-plus cursor-pointer"></i>
